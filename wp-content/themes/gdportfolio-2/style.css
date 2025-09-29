@@ -472,6 +472,12 @@ body {
 .single-post p {
   font-size: 1.2em;
 }
+.featured-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
 ul.tags {
   padding: 0;
   margin: 0;
