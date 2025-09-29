@@ -21,13 +21,11 @@ h6 {
   letter-spacing: 1px;
 }
 p {
-  margin: 0 0 25px;
   font-size: 18px;
   line-height: 1.5;
 }
 @media (min-width: 768px) {
   p {
-    margin: 0 0 35px;
     font-size: 20px;
     line-height: 1.6;
   }
@@ -462,11 +460,7 @@ body {
   margin-top: 100px;
 }
 /* ----------------------------------------- CONTENT: SINGLE ---------------------------------------------- */
-.single-post h2,
-.single-post h3,
-.single-post h4,
-.single-post h5,
-.single-post h6 {
+.single-post h2 {
   text-align: center;
 }
 .single-post p {
