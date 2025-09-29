@@ -304,6 +304,14 @@ img::-moz-selection {
 body {
   webkit-tap-highlight-color: rgba(255, 255, 255, 0.2);
 }
+.responsive-video {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  display: block;
+  background-color: #000;
+  /* fallback */
+}
 .grid {
   margin-bottom: 30px;
 }
