@@ -263,8 +263,8 @@ th {
 @font-face {
   font-family: 'Glyphicons Halflings';
 
-  src: url('/game-dev/wp-content/themes/gdportfolio-2/bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.eot');
-  src: url('/game-dev/wp-content/themes/gdportfolio-2/bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.eot#iefix') format('embedded-opentype'), url('/game-dev/wp-content/themes/gdportfolio-2/bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('/game-dev/wp-content/themes/gdportfolio-2/bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.woff') format('woff'), url('/game-dev/wp-content/themes/gdportfolio-2/bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('/game-dev/wp-content/themes/gdportfolio-2/bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+  src: url('/wp-content/themes/gdportfolio-2/bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.eot');
+  src: url('/wp-content/themes/gdportfolio-2/bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.eot#iefix') format('embedded-opentype'), url('/wp-content/themes/gdportfolio-2/bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('/wp-content/themes/gdportfolio-2/bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.woff') format('woff'), url('/wp-content/themes/gdportfolio-2/bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('/wp-content/themes/gdportfolio-2/bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
 .glyphicon {
   position: relative;
