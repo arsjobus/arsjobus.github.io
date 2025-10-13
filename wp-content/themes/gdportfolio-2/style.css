@@ -172,11 +172,17 @@ a:focus {
   height: auto;
   border-radius: 6px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: filter 1s ease;
+  /* Smooth transition */
 }
 @media (min-width: 768px) {
   .featured-post-image img {
     max-width: 75%;
   }
+}
+.featured-post-image img:hover {
+  filter: brightness(1.5);
+  /* Slightly brighter on hover */
 }
 .featured-post-caption {
   font-size: 1em;
