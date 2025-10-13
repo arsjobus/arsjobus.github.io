@@ -168,10 +168,15 @@ a:focus {
   margin-bottom: 15px;
 }
 .featured-post-image img {
-  max-width: 75%;
+  max-width: 100%;
   height: auto;
   border-radius: 6px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+@media (min-width: 768px) {
+  .featured-post-image img {
+    max-width: 75%;
+  }
 }
 .featured-post-caption {
   font-size: 1em;
