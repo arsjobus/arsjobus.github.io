@@ -189,23 +189,11 @@ a:focus {
   text-align: center;
 }
 .decorative-hr {
-  border: 0;
-  height: 2px;
-  background: linear-gradient(to right, #ccc 0%, #333 50%, #ccc 100%);
+  border: 1px;
+  border-style: dashed;
   width: 60%;
   margin: 0 auto;
   position: relative;
-}
-.decorative-hr::before {
-  content: '★';
-  position: absolute;
-  top: -12px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #fff;
-  color: #333;
-  font-size: 18px;
-  padding: 0 10px;
 }
 .btn-circle {
   width: 70px;
