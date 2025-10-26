@@ -368,6 +368,12 @@ body {
   background-color: #000;
   /* fallback */
 }
+.responsive-video iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1.77777778;
+  display: block;
+}
 .grid {
   margin-bottom: 30px;
 }
