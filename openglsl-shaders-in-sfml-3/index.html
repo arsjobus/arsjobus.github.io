@@ -136,7 +136,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16
 </ul>
 <hr>
 <h3>Basic Texture Renderer</h3>
-<p>In C++ with SFML, we can configure a sf::Texture object to generate mipmaps, and the mipmapped texture will be passed along to our shader to fix avoid aliasing the rendered texture. For example a texture sized 2048&times;2048 pixels rendered on a 256&times;256 pixels rectangle doesn&rsquo;t display correctly in absence of the industry standard texture mipmapping technique. The below animated GIF shows a rectangular sprite scaling up and down within an OpenGL 2.1 context window to show that the mipmaps are working together in combination with the custom vertex and fragment shaders scripts.</p>
+<p>In C++ with SFML, we can configure a sf::Texture object to generate mipmaps, and the mipmapped texture will be passed along to our shader to avoid aliasing the applied texture. For example an image texture sized at 2048&times;2048 pixels rendered within the confines of a 256&times;256 pixels rectangle will display with an aliasing issue in absence of texture mipmaps. The below animated GIF shows a 512&times;512 pixels rectangular sprite scaling up and down within an OpenGL 2.1 context window, and it demonstrates how mipmaps are working together in combination with my custom vertex and fragment shader scripts.</p>
 <p><img decoding="async" width="100%" src="/wp-content/uploads/2025/11/my-first-custom-shader.gif"></p>
 		</div>
 	</div>
