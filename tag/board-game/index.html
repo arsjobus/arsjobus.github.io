@@ -46,14 +46,15 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16
 <meta name="generator" content="WordPress 6.8.2">
 		<script>
 			window.addEventListener('load', () => {
-			const heroImg = document.querySelector('.hero-img');
-			if (heroImg.complete) {
-				heroImg.classList.add('visible');
-			} else {
-				heroImg.addEventListener('load', () => {
-				heroImg.classList.add('visible');
-				});
-			}
+				const heroImg = document.querySelector('.hero-img');
+				if (heroImg == null) return;
+				if (heroImg.complete) {
+					heroImg.classList.add('visible');
+				} else {
+					heroImg.addEventListener('load', () => {
+					heroImg.classList.add('visible');
+					});
+				}
 			});
 		</script>
 	</head>

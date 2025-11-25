@@ -50,14 +50,15 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16
 <link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=https%3A%2F%2F%2Fpong-classic%2F&amp;format=xml">
 		<script>
 			window.addEventListener('load', () => {
-			const heroImg = document.querySelector('.hero-img');
-			if (heroImg.complete) {
-				heroImg.classList.add('visible');
-			} else {
-				heroImg.addEventListener('load', () => {
-				heroImg.classList.add('visible');
-				});
-			}
+				const heroImg = document.querySelector('.hero-img');
+				if (heroImg == null) return;
+				if (heroImg.complete) {
+					heroImg.classList.add('visible');
+				} else {
+					heroImg.addEventListener('load', () => {
+					heroImg.classList.add('visible');
+					});
+				}
 			});
 		</script>
 	</head>
