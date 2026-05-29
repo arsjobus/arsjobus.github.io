@@ -44,6 +44,14 @@ a:focus {
 .light {
   font-weight: 400;
 }
+.navbar-brand {
+  margin: 0;
+  padding: 15px 20px;
+}
+.navbar-header {
+  display: flex;
+  direction: row;
+}
 .navbar-custom {
   margin-bottom: 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
@@ -52,9 +60,13 @@ a:focus {
   background-color: black;
 }
 .navbar-custom .navbar-toggle {
+  justify-self: flex-end;
   color: white;
   background-color: rgba(255, 255, 255, 0.2);
   font-size: 12px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: auto;
 }
 .navbar-custom .navbar-toggle:focus,
 .navbar-custom .navbar-toggle:active {
@@ -95,7 +107,6 @@ a:focus {
 }
 @media (min-width: 768px) {
   .navbar-custom {
-    padding: 20px 0;
     border-bottom: none;
     letter-spacing: 1px;
     background: transparent;
