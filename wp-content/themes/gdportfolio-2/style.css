@@ -182,15 +182,10 @@ a:focus {
 .featured-post-image img {
   max-width: 100%;
   height: auto;
-  border-radius: 6px;
+  border-radius: 0;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transition: filter 1s ease;
   /* Smooth transition */
-}
-@media (min-width: 768px) {
-  .featured-post-image img {
-    max-width: 75%;
-  }
 }
 .featured-post-image img:hover {
   filter: brightness(1.5);
@@ -608,4 +603,84 @@ ul.tags > li {
   .grid-item {
     margin-bottom: 5px;
   }
+}
+@keyframes filmDrift {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes projectionFlicker {
+  0%,
+  100% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(0.9);
+  }
+  70% {
+    filter: brightness(1.1);
+  }
+}
+@keyframes sprocketMove {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 26px;
+  }
+}
+/* main film container */
+.film-wrap {
+  display: flex;
+  justify-content: center;
+  animation: filmDrift 6s ease-in-out infinite;
+}
+/* film body */
+.film-strip {
+  position: relative;
+  display: block;
+  width: fit-content;
+  background: #202124;
+  /* vintage film */
+  padding: 22px 32px;
+  border-radius: 4px;
+  margin: 32px auto;
+  overflow: visible;
+}
+/* image */
+.film-img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  animation: projectionFlicker 5s ease-in-out infinite;
+}
+/* sprocket rails */
+.film-strip::before,
+.film-strip::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  width: 22px;
+  /* square punch holes */
+  background-image: repeating-linear-gradient(to bottom, transparent 0 6px, #111 6px 16px, transparent 16px 26px);
+  background-size: 100% 26px;
+  background-repeat: repeat-y;
+  /* animated movement */
+  animation: sprocketMove 1.2s linear infinite;
+}
+/* left rail */
+.film-strip::before {
+  left: 6px;
+}
+/* right rail (mirrored for symmetry) */
+.film-strip::after {
+  right: 6px;
+  transform: scaleX(-1);
 }
