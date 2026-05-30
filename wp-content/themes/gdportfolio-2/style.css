@@ -639,7 +639,6 @@ ul.tags > li {
 .film-wrap {
   display: flex;
   justify-content: center;
-  animation: filmDrift 6s ease-in-out infinite;
 }
 /* film body */
 .film-strip {
@@ -658,7 +657,6 @@ ul.tags > li {
   display: block;
   max-width: 100%;
   height: auto;
-  animation: projectionFlicker 5s ease-in-out infinite;
 }
 /* sprocket rails */
 .film-strip::before,
@@ -673,7 +671,6 @@ ul.tags > li {
   background-size: 100% 26px;
   background-repeat: repeat-y;
   /* animated movement */
-  animation: sprocketMove 1.2s linear infinite;
 }
 /* left rail */
 .film-strip::before {
