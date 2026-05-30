@@ -672,6 +672,10 @@ ul.tags > li {
   background-repeat: repeat-y;
   /* animated movement */
 }
+.film-strip:hover::before,
+.film-strip:hover::after {
+  animation: sprocketMove 1.2s linear infinite;
+}
 /* left rail */
 .film-strip::before {
   left: 6px;
