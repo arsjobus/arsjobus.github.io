@@ -187,10 +187,6 @@ a:focus {
   transition: filter 1s ease;
   /* Smooth transition */
 }
-.featured-post-image img:hover {
-  filter: brightness(1.5);
-  /* Slightly brighter on hover */
-}
 .featured-post-caption {
   font-size: 1em;
   padding-top: 10px;
