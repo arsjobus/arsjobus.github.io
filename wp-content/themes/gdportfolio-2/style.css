@@ -641,8 +641,7 @@ ul.tags > li {
   position: relative;
   display: block;
   width: fit-content;
-  background: #e8e4da;
-  /* vintage film */
+  background: linear-gradient(to bottom, #895936, #F4DD91, #754A1C);
   padding: 22px 32px;
   border-radius: 4px;
   margin: 0px auto;
