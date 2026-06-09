@@ -183,7 +183,6 @@ a:focus {
   max-width: 100%;
   height: auto;
   border-radius: 0;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transition: filter 1s ease;
   /* Smooth transition */
 }
@@ -404,7 +403,7 @@ h6 {
 }
 .grid-item img {
   box-sizing: border-box;
-  border: 1px solid #42DCA3;
+  border: 2px solid #42DCA3;
   max-width: 100%;
   height: auto;
   display: block;
@@ -642,10 +641,23 @@ ul.tags > li {
   display: block;
   width: fit-content;
   background: linear-gradient(to bottom, #895936, #F4DD91, #754A1C);
-  padding: 22px 32px;
+  padding: 2px 32px;
   border-radius: 4px;
   margin: 0px auto;
   overflow: visible;
+}
+.film-img-wrapper {
+  position: relative;
+  display: block;
+}
+.film-img-wrapper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.8);
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.8);
+  pointer-events: none;
 }
 /* image */
 .film-img {
@@ -658,18 +670,14 @@ ul.tags > li {
 .film-strip::after {
   content: "";
   position: absolute;
-  top: 10px;
-  bottom: 10px;
+  top: 0px;
+  bottom: 0px;
   width: 22px;
   /* square punch holes */
   background-image: repeating-linear-gradient(to bottom, transparent 0 6px, #111 6px 16px, transparent 16px 26px);
   background-size: 100% 26px;
   background-repeat: repeat-y;
   /* animated movement */
-}
-.film-strip:hover::before,
-.film-strip:hover::after {
-  animation: sprocketMove 1.2s linear infinite;
 }
 /* left rail */
 .film-strip::before {
