@@ -445,10 +445,6 @@ h6 {
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), inset 0 -1px 0 rgba(0, 0, 0, 0.3), 0 0 6px #42DCA3;
   opacity: 0.9;
 }
-.copyright {
-  font-size: 1em;
-  padding: 0 5px;
-}
 /* -------------------------------------------- IMAGE SLIDE ----------------------------------------------- */
 .image-slide-click-button {
   background-color: #42DCA3;
@@ -539,21 +535,6 @@ h6 {
   margin: 0;
   text-align: center;
 }
-/* -------------------------------------------- CONTACT FORM ---------------------------------------------- */
-#social-media-links {
-  text-align: center;
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-  overflow: none;
-}
-#social-media-links > li {
-  display: inline-block;
-  margin-right: 15px;
-}
-#social-media-links > li:last-child {
-  margin-right: 0;
-}
 /* -------------------------------------------- PAGE ------------------------------------------------------ */
 .attribution {
   font-size: 1em;
@@ -615,12 +596,24 @@ ul.tags > li {
 }
 @keyframes filmDrift {
   0% {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -o-transform: translateY(0);
+    -ms-transform: translateY(0);
     transform: translateY(0);
   }
   50% {
+    -webkit-transform: translateY(-2px);
+    -moz-transform: translateY(-2px);
+    -o-transform: translateY(-2px);
+    -ms-transform: translateY(-2px);
     transform: translateY(-2px);
   }
   100% {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -o-transform: translateY(0);
+    -ms-transform: translateY(0);
     transform: translateY(0);
   }
 }
@@ -692,7 +685,6 @@ ul.tags > li {
   background-image: repeating-linear-gradient(to bottom, transparent 0 6px, #111 6px 16px, transparent 16px 26px);
   background-size: 100% 26px;
   background-repeat: repeat-y;
-  /* animated movement */
 }
 /* left rail */
 .film-strip::before {
@@ -703,23 +695,9 @@ ul.tags > li {
   right: 6px;
   transform: scaleX(-1);
 }
-ul#game-controls {
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-}
-ul#game-controls > li {
-  background-color: rgba(255, 255, 255, 0.5);
-  border: 2px solid #aaa;
-  color: #000;
-  border-radius: 999px;
-  padding: 0.5rem 1rem;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  font-size: 1.5rem;
-  font-weight: bold;
-  line-height: 1.5em;
-}
+/* ==================================================
+   SINGLE POST - GAME EMBEDS
+   ================================================== */
 .game_window {
   flex-flow: row;
   justify-content: center;
@@ -756,6 +734,9 @@ ul#game-controls > li {
   position: absolute;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
 }
+.game_window > .rl-button-game:hover {
+  background-color: #98eccd;
+}
 .itch-embed {
   width: 100%;
   max-width: 552px;
@@ -767,6 +748,37 @@ ul#game-controls > li {
   max-width: 552px;
   border: 0;
 }
+ul#game-controls {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+ul#game-controls > li::before {
+  content: "• ";
+  color: #000;
+}
+ul#game-controls > li {
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 2px solid #aaa;
+  color: #000;
+  -webkit-border-radius: 12px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 12px;
+  -moz-background-clip: padding;
+  border-radius: 12px;
+  background-clip: padding-box;
+  box-sizing: border-box;
+  padding: 0 1rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 20px;
+  min-height: 20px;
+}
+/* ==================================================
+   FRONTPAGE - SKILLSET SECTION
+   ================================================== */
 #skillset ul {
   width: 100%;
   padding: 0;
@@ -789,4 +801,25 @@ ul#game-controls > li {
 }
 #skillset ul > li:hover {
   background-color: #25c68a;
+}
+/* ==================================================
+   FOOTER
+   ================================================== */
+#social-media-links {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  overflow: none;
+}
+#social-media-links > li {
+  display: inline-block;
+  margin-right: 15px;
+}
+#social-media-links > li:last-child {
+  margin-right: 0;
+}
+.copyright {
+  font-size: 1em;
+  padding: 0 5px;
 }
