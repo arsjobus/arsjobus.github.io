@@ -104,8 +104,8 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16
 			<h2>IcoJam Game Jam 2023</h2>
 
 											<div class="game_window">
-					<div class="game_frame w-embed w-iframe" style="background-image: url('/wp-content/uploads/2025/09/ico-game-jam-2023-screencap1.jpg'); background-size: cover; background-position: center;">
-						<iframe id="game" frameborder="0" src="about:blank" data-no-optimize="1" loading="eager" data-src="https://itch.io/embed-upload/15211816?color=000000" allowfullscreen="true" width="100%" style="aspect-ratio: 16 / 9; pointer-events: none;"></iframe>
+					<div class="game_frame w-embed w-iframe" style="background-image: url('/wp-content/uploads/2025/09/ico-game-jam-2023-screencap1.jpg'); background-size: cover; background-position: center; aspect-ratio: 16 / 9; pointer-events: none;">
+						<iframe id="game" frameborder="0" src="about:blank" data-no-optimize="1" loading="eager" data-src="https://itch.io/embed-upload/15211816?color=000000" allowfullscreen="true" width="100%" style="display: none; aspect-ratio: 16 / 9; pointer-events: none;"></iframe>
 					</div>
 					<a id="button-game-start" href="#" class="rl-button-game">
 						<div class="code-embed w-embed">
@@ -224,6 +224,7 @@ Using AI-generated art proved to be a valuable tool for rapid prototyping within
 					e.preventDefault();
 
 					const iframe = document.getElementById("game");
+					iframe.style.display = "block";
 					iframe.src = iframe.dataset.src;
 
 					iframe.style.pointerEvents = "auto";
