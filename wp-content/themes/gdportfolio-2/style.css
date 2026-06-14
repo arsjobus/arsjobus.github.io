@@ -701,6 +701,9 @@ ul.tags > li {
 .game_window > .game_frame {
   width: 100%;
 }
+.game_window > .game_frame > iframe {
+  display: block;
+}
 .game_window > .rl-button-game {
   border-color: #000;
   border-width: 2px;
