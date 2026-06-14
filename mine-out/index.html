@@ -42,7 +42,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16
 <link rel="stylesheet" id="icomoon-css" href="/wp-content/themes/gdportfolio-2/assets/css/icomoon.css?ver=1.0.0" type="text/css" media="all">
 <link rel="stylesheet" id="bootstrap-css" href="/wp-content/themes/gdportfolio-2/bower_components/bootstrap/dist/css/bootstrap.css?ver=3.3.7" type="text/css" media="all">
 <link rel="stylesheet" id="font-awesome-css" href="/wp-content/themes/gdportfolio-2/bower_components/font-awesome/css/font-awesome.css?ver=4.7.0" type="text/css" media="all">
-<link rel="stylesheet" id="theme-style-css" href="/wp-content/themes/gdportfolio-2/style.css?ver=1780965551" type="text/css" media="all">
+<link rel="stylesheet" id="theme-style-css" href="/wp-content/themes/gdportfolio-2/style.css?ver=1781412456" type="text/css" media="all">
 <link rel="https://api.w.org/" href="/wp-json/"><link rel="alternate" title="JSON" type="application/json" href="/wp-json/wp/v2/posts/1375"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd">
 <meta name="generator" content="WordPress 6.8.2">
 <link rel="canonical" href="/mine-out/">
@@ -107,7 +107,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16
 					<a href="/wp-content/uploads/2025/10/mine-out-featured.png" data-lightbox="main" data-title="">
 						<img width="1920" height="1080" src="/wp-content/uploads/2025/10/mine-out-featured.png" class="featured-image" alt="" decoding="async" fetchpriority="high" srcset="/wp-content/uploads/2025/10/mine-out-featured.png 1920w, /wp-content/uploads/2025/10/mine-out-featured-768x432.png 768w, /wp-content/uploads/2025/10/mine-out-featured-1024x576.png 1024w, /wp-content/uploads/2025/10/mine-out-featured-1536x864.png 1536w, /wp-content/uploads/2025/10/mine-out-featured-512x288.png 512w" sizes="(max-width: 1920px) 100vw, 1920px">					</a>
 				</div>
-			
+							
 			<div style="margin-bottom: 10px; padding-left: 5px;" class="publication-info pull-left">
 				Published on September 29, 2025			</div>
 
@@ -206,6 +206,19 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16
 				$('.navbar-collapse ul li a').click(function() {
 				    $(this).closest('.collapse').collapse('toggle');
 				});
+			});
+		</script>
+
+		<script>
+			var button = $("#button-game-start");
+			button.click(function(){
+				var iframe = $("#game");
+				var iframe_style = document.getElementById("game");
+				var button_style = document.getElementById("button-game-start");
+				
+				iframe.attr("src", iframe.data("src")); 
+				iframe_style.style.pointerEvents = "auto";
+				button_style.style.display = "none";
 			});
 		</script>
 </body>

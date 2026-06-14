@@ -42,7 +42,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16
 <link rel="stylesheet" id="icomoon-css" href="/wp-content/themes/gdportfolio-2/assets/css/icomoon.css?ver=1.0.0" type="text/css" media="all">
 <link rel="stylesheet" id="bootstrap-css" href="/wp-content/themes/gdportfolio-2/bower_components/bootstrap/dist/css/bootstrap.css?ver=3.3.7" type="text/css" media="all">
 <link rel="stylesheet" id="font-awesome-css" href="/wp-content/themes/gdportfolio-2/bower_components/font-awesome/css/font-awesome.css?ver=4.7.0" type="text/css" media="all">
-<link rel="stylesheet" id="theme-style-css" href="/wp-content/themes/gdportfolio-2/style.css?ver=1780965551" type="text/css" media="all">
+<link rel="stylesheet" id="theme-style-css" href="/wp-content/themes/gdportfolio-2/style.css?ver=1781412456" type="text/css" media="all">
 <link rel="https://api.w.org/" href="/wp-json/"><link rel="alternate" title="JSON" type="application/json" href="/wp-json/wp/v2/posts/1938"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd">
 <meta name="generator" content="WordPress 6.8.2">
 <link rel="canonical" href="/veil-of-ashcroft-manor/">
@@ -103,11 +103,17 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16
 		<div class="col-md-12">
 			<h2>Veil of Ashcroft Manor VN</h2>
 
-											<div id="featured-image-container" class="post-thumbnail">
-					<a href="/wp-content/uploads/2026/05/veil-of-ashcroft-vn-screenshot-01.jpg" data-lightbox="main" data-title="AI-produced Visual Novel with dark fantasy theme built with custom creation kit">
-						<img width="1920" height="1080" src="/wp-content/uploads/2026/05/veil-of-ashcroft-vn-screenshot-01-1920x1080.jpg" class="featured-image" alt="" decoding="async" fetchpriority="high">					</a>
+											<div class="game_window">
+					<div class="game_frame w-embed w-iframe" style="background-image: url('/wp-content/uploads/2026/05/veil-of-ashcroft-vn-screenshot-01.jpg'); background-size: cover; background-position: center;">
+						<iframe id="game" frameborder="0" data-src="https://itch.io/embed-upload/17576744?color=000000" src="about:blank" allowfullscreen="true" width="100%" style="aspect-ratio: 16 / 9; pointer-events: none;"></iframe>
+					</div>
+					<a id="button-game-start" href="#" class="rl-button-game w-inline-block">
+						<div class="code-embed w-embed">
+							<i class="fa fa-play-circle"></i>&nbsp;PLAY GAME
+						</div>
+					</a>
 				</div>
-			
+							
 			<div style="margin-bottom: 10px; padding-left: 5px;" class="publication-info pull-left">
 				Published on May 16, 2026			</div>
 
@@ -140,8 +146,9 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16
 		<div class="entry col-md-12">
 			<h3>Releases</h3>
 <p>A latest WebGL release may be played on Itch.io:</p>
-<p><a class="btn btn-read-more" href="https://arsjobus.itch.io/veil-of-ashcroft-manor" target="_blank"><i class="fa fa-play"></i>&nbsp;Play Game</a></p>
-<hr>
+<div class="itch-embed">
+<iframe frameborder="0" src="https://itch.io/embed/4580714?bg_color=222222&amp;fg_color=eeeeee&amp;link_color=42DCA3&amp;border_color=363636" width="552" height="167"><a href="https://arsjobus.itch.io/winter-in-japan">Winter in Japan by arsjobus</a></iframe>
+</div>
 <h3>About this Project</h3>
 <p>Veil of Ashcroft Manor VN is a short-form pixel art visual novel with branching choices, three distinct endings, and it&rsquo;s built atop Twine Harlowe 3.x story format. It&rsquo;s a short demo to showcase what my underlying visual novel creation system and processes can accomplish in less than 24 hours!</p>
 <h3>My Role</h3>
@@ -212,6 +219,19 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16
 				$('.navbar-collapse ul li a').click(function() {
 				    $(this).closest('.collapse').collapse('toggle');
 				});
+			});
+		</script>
+
+		<script>
+			var button = $("#button-game-start");
+			button.click(function(){
+				var iframe = $("#game");
+				var iframe_style = document.getElementById("game");
+				var button_style = document.getElementById("button-game-start");
+				
+				iframe.attr("src", iframe.data("src")); 
+				iframe_style.style.pointerEvents = "auto";
+				button_style.style.display = "none";
 			});
 		</script>
 </body>
