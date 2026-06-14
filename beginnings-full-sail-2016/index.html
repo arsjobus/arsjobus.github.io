@@ -40,9 +40,10 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16
 </style>
 <link rel="stylesheet" id="lightbox-css" href="/wp-content/plugins/boxkite-gallery/assets/css/lightbox.css" type="text/css" media="">
 <link rel="stylesheet" id="icomoon-css" href="/wp-content/themes/gdportfolio-2/assets/css/icomoon.css?ver=1.0.0" type="text/css" media="all">
+<link rel="stylesheet" id="theme-fonts-css" href="/wp-content/themes/gdportfolio-2/assets/css/fonts.css?ver=1.0.0" type="text/css" media="all">
 <link rel="stylesheet" id="bootstrap-css" href="/wp-content/themes/gdportfolio-2/bower_components/bootstrap/dist/css/bootstrap.css?ver=3.3.7" type="text/css" media="all">
 <link rel="stylesheet" id="font-awesome-css" href="/wp-content/themes/gdportfolio-2/bower_components/font-awesome/css/font-awesome.css?ver=4.7.0" type="text/css" media="all">
-<link rel="stylesheet" id="theme-style-css" href="/wp-content/themes/gdportfolio-2/style.css?ver=1781413950" type="text/css" media="all">
+<link rel="stylesheet" id="theme-style-css" href="/wp-content/themes/gdportfolio-2/style.css?ver=1781425298" type="text/css" media="all">
 <link rel="https://api.w.org/" href="/wp-json/"><link rel="alternate" title="JSON" type="application/json" href="/wp-json/wp/v2/posts/1367"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd">
 <meta name="generator" content="WordPress 6.8.2">
 <link rel="canonical" href="/beginnings-full-sail-2016/">
@@ -104,8 +105,8 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16
 			<h2>Beginnings</h2>
 
 											<div class="game_window">
-					<div class="game_frame w-embed w-iframe" style="background-image: url('/wp-content/uploads/2025/09/beginning-full-sail-level-1.jpg'); background-size: cover; background-position: center;">
-						<iframe id="game" frameborder="0" src="" data-src="https://itch.io/embed-upload/17401575?color=000000" allowfullscreen="true" width="100%" style="aspect-ratio: 16 / 9; pointer-events: none;"></iframe>
+					<div class="game_frame w-embed w-iframe" style="background-image: url('/wp-content/uploads/2025/09/beginning-full-sail-level-1.jpg'); background-size: cover; background-position: center; aspect-ratio: 16 / 9; pointer-events: none;">
+						<iframe id="game" frameborder="0" src="about:blank" data-no-optimize="1" loading="eager" data-src="https://itch.io/embed-upload/17401575?color=f1f0ed" allowfullscreen="true" width="100%" style="display: none; aspect-ratio: 16 / 9; pointer-events: none;"></iframe>
 					</div>
 					<a id="button-game-start" href="#" class="rl-button-game">
 						<div class="code-embed w-embed">
@@ -147,6 +148,17 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16
 </div>
 <h3>About this Project</h3>
 <p>Full Sail University (November 2016) Interactive Design I &ndash; Beginnings Project &ndash; During this course, I was tasked with creating an interaction entirely within Unity Engine.</p>
+<h3>Controls (Keyboard)</h3>
+<ul id="game-controls">
+<li>&lt;LEFT&gt; Turn Left</li>
+<li>&lt;RIGHT&gt; Turn Right</li>
+<li>&lt;UP&gt; Move Forward</li>
+<li>&lt;DOWN&gt; Reverse</li>
+<li>&lt;SPACE&gt; Fire Single Shot</li>
+<li>&lt;S&gt; Turn Off / On Explosions</li>
+<li>&lt;R&gt; Reset Current Level</li>
+<li>&lt;N&gt; Skip to Next Level</li>
+</ul>
 <h3>Gallery</h3>
 <div class="grid"><div class="grid-sizer"><div class="gutter-sizer"><div class="grid-item"><a href="/wp-content/uploads/2016/11/Thunder-Valley-Screenshot-Title-Screen-Alt.jpg" data-lightbox="gallery-1" data-title=""><img fetchpriority="high" decoding="async" width="768" height="768" src="/wp-content/uploads/2016/11/Thunder-Valley-Screenshot-Title-Screen-Alt-768x768.jpg" class="attachment-thumbnail size-thumbnail" alt="" style="width: 100%; height: auto;" srcset="/wp-content/uploads/2016/11/Thunder-Valley-Screenshot-Title-Screen-Alt-768x768.jpg 768w, /wp-content/uploads/2016/11/Thunder-Valley-Screenshot-Title-Screen-Alt-512x512.jpg 512w, /wp-content/uploads/2016/11/Thunder-Valley-Screenshot-Title-Screen-Alt-150x150.jpg 150w" sizes="(max-width: 768px) 100vw, 768px"></a></div><div class="grid-item"><a href="/wp-content/uploads/2025/09/beginning-full-sail-level-1.jpg" data-lightbox="gallery-1" data-title=""><img decoding="async" width="768" height="768" src="/wp-content/uploads/2025/09/beginning-full-sail-level-1-768x768.jpg" class="attachment-thumbnail size-thumbnail" alt="" style="width: 100%; height: auto;" srcset="/wp-content/uploads/2025/09/beginning-full-sail-level-1-768x768.jpg 768w, /wp-content/uploads/2025/09/beginning-full-sail-level-1-512x512.jpg 512w" sizes="(max-width: 768px) 100vw, 768px"></a></div></div></div></div>
 		</div>
@@ -212,21 +224,17 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16
 				$('.navbar-collapse ul li a').click(function() {
 				    $(this).closest('.collapse').collapse('toggle');
 				});
-			});
-		</script>
 
-		<script>
-			var button = $("#button-game-start");
-			button.click(function(e){
-				e.preventDefault(); // stops the "#" navigation
+				// Handle game start button click event
+				$("#button-game-start").on("click", function (e) {
+					e.preventDefault();
 
-				var iframe = $("#game");
-				var iframe_style = document.getElementById("game");
-				var button_style = document.getElementById("button-game-start");
-				
-				iframe.attr("src", iframe.data("src")); 
-				iframe_style.style.pointerEvents = "auto";
-				button_style.style.display = "none";
+					const iframe = document.getElementById("game");
+					iframe.src = iframe.dataset.src;
+					iframe.style.display = "block";
+					iframe.style.pointerEvents = "auto";
+					document.getElementById("button-game-start").style.display = "none";
+				});
 			});
 		</script>
 </body>
