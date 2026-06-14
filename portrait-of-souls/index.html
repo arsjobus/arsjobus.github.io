@@ -213,21 +213,20 @@ As Team Lead and AI Programming Lead, I was responsible for guiding overall deve
 				$('.navbar-collapse ul li a').click(function() {
 				    $(this).closest('.collapse').collapse('toggle');
 				});
-			});
-		</script>
 
-		<script>
-			var button = $("#button-game-start");
-			button.click(function(e){
-				e.preventDefault(); // stops the "#" navigation
+				// Handle game start button click event
+				var button = $("#button-game-start");
+				button.click(function(e){
+					e.preventDefault(); // stops the "#" navigation
 
-				var iframe = $("#game");
-				var iframe_style = document.getElementById("game");
-				var button_style = document.getElementById("button-game-start");
-				
-				iframe.attr("src", iframe.data("src")); 
-				iframe_style.style.pointerEvents = "auto";
-				button_style.style.display = "none";
+					var iframe = $("#game");
+					var iframe_style = document.getElementById("game");
+					var button_style = document.getElementById("button-game-start");
+					
+					iframe.attr("src", iframe.data("src")); 
+					iframe_style.style.pointerEvents = "auto";
+					button_style.style.display = "none";
+				});
 			});
 		</script>
 </body>
