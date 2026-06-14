@@ -759,3 +759,26 @@ ul#game-controls > li {
   max-width: 552px;
   border: 0;
 }
+#skillset ul {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 40px;
+  list-style-type: none;
+}
+#skillset ul > li {
+  display: inline-block;
+  background-color: #42DCA3;
+  border-radius: 999px;
+  color: #000;
+  font-weight: bold;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Verdana, sans-serif;
+  padding: 0.5rem 1rem;
+  margin: 0.25rem;
+  min-width: 50px;
+  text-align: center;
+  user-select: none;
+}
+#skillset ul > li:hover {
+  background-color: #25c68a;
+}
