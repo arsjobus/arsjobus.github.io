@@ -648,6 +648,7 @@ ul.tags > li {
 }
 .film-img-wrapper {
   position: relative;
+  background-color: #000;
   display: block;
 }
 .film-img-wrapper::after {
