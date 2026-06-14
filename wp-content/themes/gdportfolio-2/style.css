@@ -24,7 +24,7 @@ p {
   font-size: 18px;
   line-height: 1.5;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   p {
     font-size: 20px;
     line-height: 1.6;
@@ -105,7 +105,7 @@ a:focus {
 .navbar-custom .nav li.active a:hover {
   color: white;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .navbar-custom {
     border-bottom: none;
     letter-spacing: 1px;
@@ -144,7 +144,7 @@ a:focus {
 .intro .intro-body .intro-text {
   font-size: 18px;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .intro {
     height: 100%;
     padding: 0;
@@ -501,6 +501,11 @@ h6 {
     display: none;
   }
 }
+@media (max-height: 400px) {
+  .btn-circle.page-scroll {
+    display: none !important;
+  }
+}
 .image-slide {
   float: left;
   padding: 0 15px;
@@ -774,7 +779,7 @@ ul#game-controls > li {
   font-weight: bold;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Verdana, sans-serif;
   padding: 0.5rem 1rem;
-  margin: 0.25rem;
+  margin: 0rem 0rem 0.5rem 0.5rem;
   min-width: 50px;
   text-align: center;
   user-select: none;
