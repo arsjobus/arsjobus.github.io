@@ -233,9 +233,8 @@ Beyond level design, I&rsquo;m responsible for preserving and modernizing the ga
 					e.preventDefault();
 
 					const iframe = document.getElementById("game");
-					iframe.style.display = "block";
 					iframe.src = iframe.dataset.src;
-
+					iframe.style.display = "block";
 					iframe.style.pointerEvents = "auto";
 					document.getElementById("button-game-start").style.display = "none";
 				});

@@ -224,9 +224,8 @@ Using AI-generated art proved to be a valuable tool for rapid prototyping within
 					e.preventDefault();
 
 					const iframe = document.getElementById("game");
-					iframe.style.display = "block";
 					iframe.src = iframe.dataset.src;
-
+					iframe.style.display = "block";
 					iframe.style.pointerEvents = "auto";
 					document.getElementById("button-game-start").style.display = "none";
 				});
