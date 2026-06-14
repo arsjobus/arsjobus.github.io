@@ -777,16 +777,16 @@ ul#game-controls > li {
   min-height: 20px;
 }
 /* ==================================================
-   FRONTPAGE - SKILLSET SECTION
+   FRONTPAGE - SKILL SET SECTION
    ================================================== */
-#skillset ul {
+#skill-set ul {
   width: 100%;
   padding: 0;
   margin: 0;
   margin-bottom: 40px;
   list-style-type: none;
 }
-#skillset ul > li {
+#skill-set ul > li {
   display: inline-block;
   background-color: #42DCA3;
   border-radius: 999px;
@@ -799,7 +799,7 @@ ul#game-controls > li {
   text-align: center;
   user-select: none;
 }
-#skillset ul > li:hover {
+#skill-set ul > li:hover {
   background-color: #25c68a;
 }
 /* ==================================================
