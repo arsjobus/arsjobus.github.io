@@ -206,17 +206,14 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16
 				});
 
 				// Handle game start button click event
-				var button = $("#button-game-start");
-				button.click(function(e){
-					e.preventDefault(); // stops the "#" navigation
+				$("#button-game-start").on("click", function (e) {
+					e.preventDefault();
 
-					var iframe = $("#game");
-					var iframe_style = document.getElementById("game");
-					var button_style = document.getElementById("button-game-start");
-					
-					iframe.attr("src", iframe.data("src")); 
-					iframe_style.style.pointerEvents = "auto";
-					button_style.style.display = "none";
+					const iframe = document.getElementById("game");
+					iframe.src = iframe.dataset.src;
+
+					iframe.style.pointerEvents = "auto";
+					document.getElementById("button-game-start").style.display = "none";
 				});
 			});
 		</script>

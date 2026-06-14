@@ -105,7 +105,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16
 
 											<div class="game_window">
 					<div class="game_frame w-embed w-iframe" style="background-image: url('/wp-content/uploads/2026/06/visuals-project-screencap-03.jpg'); background-size: cover; background-position: center;">
-						<iframe id="game" frameborder="0" src="" data-src="https://itch.io/embed-upload/17838001?color=000000" allowfullscreen="true" width="100%" style="aspect-ratio: 16 / 9; pointer-events: none;"></iframe>
+						<iframe id="game" frameborder="0" src="about:blank" data-no-optimize="1" loading="eager" data-src="https://itch.io/embed-upload/17838001?color=000000" allowfullscreen="true" width="100%" style="aspect-ratio: 16 / 9; pointer-events: none;"></iframe>
 					</div>
 					<a id="button-game-start" href="#" class="rl-button-game">
 						<div class="code-embed w-embed">
@@ -224,17 +224,14 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16
 				});
 
 				// Handle game start button click event
-				var button = $("#button-game-start");
-				button.click(function(e){
-					e.preventDefault(); // stops the "#" navigation
+				$("#button-game-start").on("click", function (e) {
+					e.preventDefault();
 
-					var iframe = $("#game");
-					var iframe_style = document.getElementById("game");
-					var button_style = document.getElementById("button-game-start");
-					
-					iframe.attr("src", iframe.data("src")); 
-					iframe_style.style.pointerEvents = "auto";
-					button_style.style.display = "none";
+					const iframe = document.getElementById("game");
+					iframe.src = iframe.dataset.src;
+
+					iframe.style.pointerEvents = "auto";
+					document.getElementById("button-game-start").style.display = "none";
 				});
 			});
 		</script>
