@@ -700,13 +700,6 @@ ul#game-controls {
   margin: 0;
   list-style-type: none;
 }
-ul#game-controls > li::before {
-  content: "⌨️";
-  border-radius: 999px;
-  margin-right: 5px;
-  font-size: 1.5rem;
-  line-height: 1.5em;
-}
 ul#game-controls > li {
   background-color: rgba(255, 255, 255, 0.5);
   border: 2px solid #aaa;
@@ -736,6 +729,7 @@ ul#game-controls > li {
   display: block;
 }
 .game_window > .rl-button-game {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Verdana, sans-serif;
   border-color: #000;
   border-width: 2px;
   border-radius: 4px;
