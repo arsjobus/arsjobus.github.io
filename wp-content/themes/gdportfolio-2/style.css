@@ -502,6 +502,9 @@ h6 {
   }
 }
 @media (max-height: 400px) {
+  #intro-text {
+    display: none;
+  }
   .btn-circle.page-scroll {
     display: none !important;
   }
