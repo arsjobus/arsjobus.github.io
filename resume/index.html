@@ -46,7 +46,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16
 <link rel="stylesheet" id="theme-fonts-css" href="/wp-content/themes/gdportfolio-2/assets/css/fonts.css?ver=1.0.0" type="text/css" media="all">
 <link rel="stylesheet" id="bootstrap-css" href="/wp-content/themes/gdportfolio-2/bower_components/bootstrap/dist/css/bootstrap.css?ver=3.3.7" type="text/css" media="all">
 <link rel="stylesheet" id="font-awesome-css" href="/wp-content/themes/gdportfolio-2/bower_components/font-awesome/css/font-awesome.css?ver=4.7.0" type="text/css" media="all">
-<link rel="stylesheet" id="theme-style-css" href="/wp-content/themes/gdportfolio-2/style.css?ver=1781446120" type="text/css" media="all">
+<link rel="stylesheet" id="theme-style-css" href="/wp-content/themes/gdportfolio-2/style.css?ver=1781488964" type="text/css" media="all">
 <link rel="https://api.w.org/" href="/wp-json/"><link rel="alternate" title="JSON" type="application/json" href="/wp-json/wp/v2/pages/1709"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd">
 <meta name="generator" content="WordPress 6.8.2">
 <link rel="canonical" href="/resume/">
@@ -54,6 +54,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16
 <link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=https%3A%2F%2F%2Fresume%2F">
 <link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=https%3A%2F%2F%2Fresume%2F&amp;format=xml">
 		<script>
+			// Sets the Hero Image to visible after it has been fully loaded
 			window.addEventListener('load', () => {
 				const heroImg = document.querySelector('.hero-img');
 				if (heroImg == null) return;
@@ -61,7 +62,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16
 					heroImg.classList.add('visible');
 				} else {
 					heroImg.addEventListener('load', () => {
-					heroImg.classList.add('visible');
+						heroImg.classList.add('visible');
 					});
 				}
 			});
@@ -71,37 +72,26 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16
 	<body id="page-top" class="wp-singular page-template-default page page-id-1709 wp-theme-gdportfolio-2" data-spy="scroll" data-target=".navbar-fixed-top">
 		<nav class="navbar navbar-custom navbar-fixed-top">
 			<div class="container">
-				<div class="navbar-header">
-										<a class="navbar-brand page-scroll" href="/#page-top">
-						<span><i class="fa fa-play-circle"></i> A-R-Shepherd</span>
+								<div class="navbar-header">
+					<a class="navbar-brand page-scroll" href="/#page-top">
+						<span><i class="fa fa-play-circle"></i>&nbsp;A-R-Shepherd</span>
 					</a>
-										<button style="margin-right: 20px;" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
-	        			<span>MENU <i class="fa fa-bars"></i></span>
-	        		</button>
+
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" style="margin-right:20px;">
+						<span>MENU <i class="fa fa-bars"></i></span>
+					</button>
 				</div>
-			
+
 				<div id="navbar" class="collapse navbar-collapse navbar-right">
 					<ul class="nav navbar-nav">
-												<li class="hidden active">
-							<a href="/#page-top"></a>
-						</li>
-						<li>
-							<a class="page-scroll" href="/#projects-featured">Featured</a>
-						</li>
-						<li>
-							<a class="page-scroll" href="/#projects-academic">Academic</a>
-						</li>
-						<li>
-							<a class="page-scroll" href="/#projects-personal">Personal</a>
-						</li>
-						<li>
-							<a class="page-scroll" href="/#skill-set">Skill Set</a>
-						</li>
-						<li>
-							<a class="page-scroll" href="/#contact">Contact</a>
-						</li>
-											</ul>
-		    </div>
+						<li class="hidden active"><a href="/#page-top"></a></li>
+						<li><a class="page-scroll" href="/#projects-featured">Featured</a></li>
+						<li><a class="page-scroll" href="/#projects-academic">Academic</a></li>
+						<li><a class="page-scroll" href="/#projects-personal">Personal</a></li>
+						<li><a class="page-scroll" href="/#skill-set">Skill Set</a></li>
+						<li><a class="page-scroll" href="/#contact">Contact</a></li>
+					</ul>
+				</div>
 			</div>
 		</nav>
 <div id="content">
