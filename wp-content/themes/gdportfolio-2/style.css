@@ -46,7 +46,7 @@ a:focus {
 }
 .navbar-brand {
   margin: 0;
-  padding: 15px 20px;
+  padding: 15px 15px;
 }
 .navbar-header {
   display: flex;
@@ -368,21 +368,6 @@ h2 {
 h3 {
   font-size: 22px;
 }
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  padding: 0 5px;
-}
-.decorative-hr-container {
-  padding: 0 5px;
-}
-.featured-post-image {
-  padding: 0 5px;
-}
 .responsive-video {
   width: 100%;
   height: auto;
@@ -406,6 +391,7 @@ h6 {
 }
 .grid-item {
   padding: 5px;
+  aspect-ratio: 1;
 }
 .grid-item img {
   box-sizing: border-box;
@@ -551,7 +537,6 @@ h6 {
 }
 #featured-image-container {
   margin-bottom: 10px;
-  padding: 0 5px;
 }
 .featured-image {
   width: 100%;
@@ -704,8 +689,6 @@ ul.tags > li {
   align-items: center;
   display: flex;
   position: relative;
-  margin-left: 5px;
-  margin-right: 5px;
   margin-bottom: 10px;
 }
 .game_window > .game_frame {
@@ -740,8 +723,6 @@ ul.tags > li {
 .itch-embed {
   width: 100%;
   max-width: 552px;
-  padding-left: 5px;
-  padding-right: 5px;
 }
 .itch-embed iframe {
   width: 100%;
@@ -821,5 +802,4 @@ ul#game-controls > li {
 }
 .copyright {
   font-size: 1em;
-  padding: 0 5px;
 }
