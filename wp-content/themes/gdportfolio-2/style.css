@@ -667,7 +667,7 @@ ul.tags > li {
   bottom: 0px;
   width: 22px;
   /* square punch holes */
-  background-image: repeating-linear-gradient(to bottom, transparent 0 6px, #111 6px 16px, transparent 16px 26px);
+  background-image: repeating-linear-gradient(to bottom, transparent 0 6px, #000 6px 16px, transparent 16px 26px);
   background-size: 100% 26px;
   background-repeat: repeat-y;
 }
