@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('/wp-content/themes/gdportfolio-2/assets/fonts/icomoon.eot?rltwbl');
-  src:  url('/wp-content/themes/gdportfolio-2/assets/fonts/icomoon.eot?rltwbl#iefix') format('embedded-opentype'),
-    url('/wp-content/themes/gdportfolio-2/assets/fonts/icomoon.ttf?rltwbl') format('truetype'),
-    url('/wp-content/themes/gdportfolio-2/assets/fonts/icomoon.woff?rltwbl') format('woff'),
-    url('/wp-content/themes/gdportfolio-2/assets/fonts/icomoon.svg?rltwbl#icomoon') format('svg');
+  src:  url('/wp-content/themes/gdportfolio-2/assets/fonts/icomoon.eot?vmb6ty');
+  src:  url('/wp-content/themes/gdportfolio-2/assets/fonts/icomoon.eot?vmb6ty#iefix') format('embedded-opentype'),
+    url('/wp-content/themes/gdportfolio-2/assets/fonts/icomoon.ttf?vmb6ty') format('truetype'),
+    url('/wp-content/themes/gdportfolio-2/assets/fonts/icomoon.woff?vmb6ty') format('woff'),
+    url('/wp-content/themes/gdportfolio-2/assets/fonts/icomoon.svg?vmb6ty#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,14 +25,23 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-sketchfab:before {
+.icon-mouse-right-click:before {
   content: "\e900";
 }
-.icon-github:before {
+.icon-mouse-left-click:before {
   content: "\e901";
 }
-.icon-itchio:before {
+.icon-mouse-scroll:before {
   content: "\e902";
+}
+.icon-sketchfab:before {
+  content: "\e903";
+}
+.icon-github:before {
+  content: "\e904";
+}
+.icon-itchio:before {
+  content: "\e905";
 }
 .icon-vimeo:before {
   content: "\eaa1";

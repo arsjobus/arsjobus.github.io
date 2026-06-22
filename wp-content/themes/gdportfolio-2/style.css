@@ -746,23 +746,13 @@ ul#game-controls {
 }
 ul#game-controls > li::before {
   content: "• ";
-  color: #000;
+  color: #fff;
 }
 ul#game-controls > li {
-  background-color: rgba(255, 255, 255, 0.5);
-  border: 2px solid #aaa;
-  color: #000;
-  -webkit-border-radius: 12px;
-  -webkit-background-clip: padding-box;
-  -moz-border-radius: 12px;
-  -moz-background-clip: padding;
-  border-radius: 12px;
-  background-clip: padding-box;
-  box-sizing: border-box;
   padding: 0 1rem;
   margin-top: 10px;
   margin-bottom: 10px;
-  font-size: 1.5rem;
+  font-size: 1.25em;
   font-weight: bold;
   line-height: 20px;
   min-height: 20px;
