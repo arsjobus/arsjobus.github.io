@@ -398,13 +398,16 @@ h3 {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   border-color: #42DCA3;
-  border-width: 2px 2px 0 2px;
+  border-width: 2px;
   border-style: solid;
   max-width: 100%;
   height: auto;
   display: block;
   margin: 0 auto;
   /* centers the image */
+}
+.home .grid-item img {
+  border-width: 2px 2px 0 2px;
 }
 .gutter-sizer {
   width: 0;
@@ -514,8 +517,8 @@ h3 {
 }
 .engine-icon {
   color: #fff;
-  width: 48px;
-  height: 48px;
+  width: 36px;
+  height: 36px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
