@@ -397,7 +397,9 @@ h3 {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  border: 2px solid #42DCA3;
+  border-color: #42DCA3;
+  border-width: 2px 2px 0 2px;
+  border-style: solid;
   max-width: 100%;
   height: auto;
   display: block;
@@ -478,6 +480,50 @@ h3 {
 .image-slide-wrapper {
   position: relative;
   text-align: center;
+}
+.thumbnail-engine-icons {
+  background-color: #121212;
+  border-width: 0 2px 2px 2px;
+  border-style: solid;
+  border-color: #42DCA3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 48px;
+  max-height: 48px;
+  gap: 0.75rem;
+  padding: 0 0.5rem;
+}
+.engine-badge {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Verdana, sans-serif;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #42DCA3;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+.engine-icon-list {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-left: auto;
+}
+.engine-icon {
+  color: #fff;
+  width: 48px;
+  height: 48px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 540px) {
+  .thumbnail-engine-icons {
+    justify-content: center;
+  }
 }
 @media (max-width: 419px) {
   .image-slide-overlay {
@@ -648,10 +694,19 @@ ul.tags > li {
   margin: 0px auto;
   overflow: visible;
 }
+.featured-post-image img {
+  transition: transform 500ms ease-out;
+  transform-origin: center center;
+  will-change: transform;
+}
+.featured-post-image img:hover {
+  transform: scale(1.05);
+}
 .film-img-wrapper {
   position: relative;
   background-color: #000;
   display: block;
+  overflow: hidden;
 }
 .film-img-wrapper::after {
   content: "";
