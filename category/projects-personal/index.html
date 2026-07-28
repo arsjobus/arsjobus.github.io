@@ -66,19 +66,6 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16
 					});
 				}
 			}
-
-			// Preload the stage-hands.gif image and add the 'ready' class when loaded
-			const stageHands = document.querySelector('.stage-hands');
-
-			if (stageHands) {
-				const gif = new Image();
-
-				gif.src = stageHands.src;
-
-				gif.onload = () => {
-					stageHands.classList.add('ready');
-				};
-			}
 		});
 		</script>
 	</head>
