@@ -47,7 +47,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16
 <link rel="stylesheet" id="theme-fonts-css" href="/wp-content/themes/gdportfolio-2/assets/css/fonts.css?ver=1.0.0" type="text/css" media="all">
 <link rel="stylesheet" id="bootstrap-css" href="/wp-content/themes/gdportfolio-2/bower_components/bootstrap/dist/css/bootstrap.min.css?ver=3.3.7" type="text/css" media="all">
 <link rel="stylesheet" id="font-awesome-css" href="/wp-content/themes/gdportfolio-2/bower_components/font-awesome/css/font-awesome.min.css?ver=4.7.0" type="text/css" media="all">
-<link rel="stylesheet" id="theme-style-css" href="/wp-content/themes/gdportfolio-2/style.min.css?ver=1784822030" type="text/css" media="all">
+<link rel="stylesheet" id="theme-style-css" href="/wp-content/themes/gdportfolio-2/style.min.css?ver=1785263025" type="text/css" media="all">
 <link rel="https://api.w.org/" href="/wp-json/"><link rel="alternate" title="JSON" type="application/json" href="/wp-json/wp/v2/pages/1363"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd">
 <meta name="generator" content="WordPress 6.8.2">
 <link rel="canonical" href="/2/">
@@ -55,10 +55,11 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16
 <link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=https%3A%2F%2F%2F">
 <link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=https%3A%2F%2F%2F&amp;format=xml">
 		<script>
-			// Sets the Hero Image to visible after it has been fully loaded
-			window.addEventListener('load', () => {
-				const heroImg = document.querySelector('.hero-img');
-				if (heroImg == null) return;
+		// Sets the Hero Image to visible after it has been fully loaded
+		window.addEventListener('load', () => {
+			const heroImg = document.querySelector('.hero-img');
+
+			if (heroImg) {
 				if (heroImg.complete) {
 					heroImg.classList.add('visible');
 				} else {
@@ -66,7 +67,21 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16
 						heroImg.classList.add('visible');
 					});
 				}
-			});
+			}
+
+			// Preload the stage-hands.gif image and add the 'ready' class when loaded
+			const stageHands = document.querySelector('.stage-hands');
+
+			if (stageHands) {
+				const gif = new Image();
+
+				gif.src = stageHands.src;
+
+				gif.onload = () => {
+					stageHands.classList.add('ready');
+				};
+			}
+		});
 		</script>
 	</head>
 
@@ -101,7 +116,10 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16
 		
 		<div style="item-align: center;" class="row">
 			<div class="col-md-8 col-md-offset-2" style="text-shadow: 2px 2px 3px #000">
-				<!-- <img src="wp-content/themes/gdportfolio-2/img/logo.png" alt="Logo" class="logo-img" /> -->
+				<img class="stage-hands" src="/page/2/wp-content/themes/gdportfolio-2/img/stage-hands.gif">
+				<div class="brand-image-wrapper">
+					<img class="brand-image" src="/page/2/wp-content/themes/gdportfolio-2/img/myself.nobg.png" alt="Logo">
+				</div>
 				<h1 class="brand-heading">A&middot;R&middot;Shepherd<br>Portfolio</h1>
 				<p id="intro-text">
 Technical Design &middot; Programmer &middot; Technical Artist</p>
@@ -641,6 +659,10 @@ Game developer with advanced expertise in Unity, 3D prop modeling, and Python, p
 					iframe.style.display = "block";
 					iframe.style.pointerEvents = "auto";
 					document.getElementById("button-game-start").style.display = "none";
+				});
+
+				$('.stage-hands').each(function () {
+					$(this).attr('src', this.src.split('?')[0] + '?t=' + Date.now());
 				});
 			});
 		</script>
