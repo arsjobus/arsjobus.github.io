@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('/wp-content/themes/gdportfolio-2/assets/fonts/icomoon.eot?giaqlc');
-  src:  url('/wp-content/themes/gdportfolio-2/assets/fonts/icomoon.eot?giaqlc#iefix') format('embedded-opentype'),
-    url('/wp-content/themes/gdportfolio-2/assets/fonts/icomoon.ttf?giaqlc') format('truetype'),
-    url('/wp-content/themes/gdportfolio-2/assets/fonts/icomoon.woff?giaqlc') format('woff'),
-    url('/wp-content/themes/gdportfolio-2/assets/fonts/icomoon.svg?giaqlc#icomoon') format('svg');
+  src:  url('/wp-content/themes/gdportfolio-2/assets/fonts/icomoon.eot?xehxd2');
+  src:  url('/wp-content/themes/gdportfolio-2/assets/fonts/icomoon.eot?xehxd2#iefix') format('embedded-opentype'),
+    url('/wp-content/themes/gdportfolio-2/assets/fonts/icomoon.ttf?xehxd2') format('truetype'),
+    url('/wp-content/themes/gdportfolio-2/assets/fonts/icomoon.woff?xehxd2') format('woff'),
+    url('/wp-content/themes/gdportfolio-2/assets/fonts/icomoon.svg?xehxd2#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-aseprite:before {
+  content: "\e911";
+}
 .icon-gimp:before {
   content: "\e910";
 }
