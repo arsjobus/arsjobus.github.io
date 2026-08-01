@@ -368,18 +368,9 @@ h2 {
 h3 {
   font-size: 22px;
 }
-.btn-circle {
-  border-color: #42DCA3;
-  color: #42DCA3;
-  position: relative;
-  z-index: 2;
-}
 #intro-text {
   position: relative;
   z-index: 2;
-}
-.btn-circle:hover {
-  color: #42DCA3 !important;
 }
 .responsive-video {
   width: 100%;
