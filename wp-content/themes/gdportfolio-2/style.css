@@ -168,7 +168,7 @@ a:focus {
   z-index: 0;
 }
 .hero-img.visible {
-  opacity: 1.0;
+  opacity: 0.6;
 }
 .featured-post {
   margin-bottom: 40px;
